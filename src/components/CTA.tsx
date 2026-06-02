@@ -1,0 +1,54 @@
+"use client";
+
+import { PLATFORM_URL } from "@/lib/constants";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { AnimatedSection } from "./ui/AnimatedSection";
+import { Button } from "./ui/Button";
+
+export function CTA() {
+  return (
+    <AnimatedSection id="cta" className="py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl bg-navy px-8 py-16 text-center md:px-16 md:py-20">
+          <div className="absolute inset-0 hero-grid opacity-30" />
+          <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-accent/20 blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-blue-400/10 blur-3xl" />
+
+          <div className="relative">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl font-bold text-white sm:text-4xl md:text-5xl"
+            >
+              Comece agora mesmo
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="mx-auto mt-4 max-w-xl text-lg text-slate-300"
+            >
+              Tenha total controle dos seus veículos através da plataforma OnTime
+              Tracker.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="mt-8"
+            >
+              <Button href={PLATFORM_URL} size="lg" external>
+                Acessar Plataforma
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </AnimatedSection>
+  );
+}
