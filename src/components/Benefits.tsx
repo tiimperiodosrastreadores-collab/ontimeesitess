@@ -37,7 +37,7 @@ export function Benefits() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-blue-300">
+          <span className="text-sm font-semibold uppercase tracking-wider text-accent-light">
             Benefícios
           </span>
           <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
@@ -62,7 +62,7 @@ export function Benefits() {
                     {String(index + 1).padStart(2, "0")}
                   </div>
                   <div className="relative">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/20 text-accent-light">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/20 text-accent">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="text-lg font-semibold text-white">

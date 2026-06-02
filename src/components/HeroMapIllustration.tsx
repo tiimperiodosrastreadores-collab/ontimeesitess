@@ -22,13 +22,13 @@ export function HeroMapIllustration() {
         >
           <defs>
             <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#1e293b" />
-              <stop offset="100%" stopColor="#0f172a" />
+              <stop offset="0%" stopColor="#111111" />
+              <stop offset="100%" stopColor="#000000" />
             </linearGradient>
             <linearGradient id="routeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#2563eb" stopOpacity="0.2" />
-              <stop offset="50%" stopColor="#2563eb" stopOpacity="0.8" />
-              <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.2" />
+              <stop offset="0%" stopColor="#22c55e" stopOpacity="0.2" />
+              <stop offset="50%" stopColor="#22c55e" stopOpacity="0.9" />
+              <stop offset="100%" stopColor="#4ade80" stopOpacity="0.2" />
             </linearGradient>
             <filter id="glow">
               <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -110,7 +110,7 @@ export function HeroMapIllustration() {
           {/* Connection lines between vehicles */}
           <motion.line
             x1="120" y1="180" x2="280" y2="120"
-            stroke="#2563eb"
+            stroke="#22c55e"
             strokeWidth="1"
             strokeDasharray="4 4"
             opacity="0.4"
@@ -120,7 +120,7 @@ export function HeroMapIllustration() {
           />
           <motion.line
             x1="280" y1="120" x2="420" y2="200"
-            stroke="#2563eb"
+            stroke="#22c55e"
             strokeWidth="1"
             strokeDasharray="4 4"
             opacity="0.4"
@@ -130,7 +130,7 @@ export function HeroMapIllustration() {
           />
           <motion.line
             x1="420" y1="200" x2="340" y2="280"
-            stroke="#2563eb"
+            stroke="#22c55e"
             strokeWidth="1"
             strokeDasharray="4 4"
             opacity="0.4"
@@ -146,7 +146,7 @@ export function HeroMapIllustration() {
                 cx={v.x}
                 cy={v.y}
                 r="24"
-                fill="#2563eb"
+                fill="#22c55e"
                 opacity="0.15"
                 initial={{ scale: 0 }}
                 animate={{ scale: [1, 1.3, 1] }}
@@ -161,7 +161,7 @@ export function HeroMapIllustration() {
                 cx={v.x}
                 cy={v.y}
                 r="8"
-                fill="#2563eb"
+                fill="#22c55e"
                 stroke="#ffffff"
                 strokeWidth="2"
                 initial={{ scale: 0 }}
@@ -180,7 +180,7 @@ export function HeroMapIllustration() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1.5 }}
         >
-          <Radio className="h-3.5 w-3.5 text-green-400" />
+          <Radio className="h-3.5 w-3.5 text-accent" />
           <span>4 veículos online</span>
         </motion.div>
 
@@ -195,7 +195,7 @@ export function HeroMapIllustration() {
         </motion.div>
 
         <motion.div
-          className="absolute top-1/2 right-6 -translate-y-1/2 rounded-lg bg-accent/90 px-3 py-2 text-xs font-medium text-white shadow-lg"
+          className="absolute top-1/2 right-6 -translate-y-1/2 rounded-lg bg-accent px-3 py-2 text-xs font-semibold text-black shadow-lg"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 2 }}
@@ -209,7 +209,7 @@ export function HeroMapIllustration() {
 
       {/* Decorative icons */}
       <motion.div
-        className="absolute -bottom-3 -left-3 flex h-12 w-12 items-center justify-center rounded-xl bg-accent text-white shadow-lg"
+        className="absolute -bottom-3 -left-3 flex h-12 w-12 items-center justify-center rounded-xl bg-accent text-black shadow-lg"
         animate={{ y: [0, -6, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       >

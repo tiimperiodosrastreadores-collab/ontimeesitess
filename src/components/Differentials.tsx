@@ -54,7 +54,7 @@ export function Differentials() {
               <motion.div key={item.title} variants={staggerItem}>
                 <GlassCard className="group h-full border border-slate-100 hover:border-accent/20">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy text-white transition-colors group-hover:bg-accent">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy text-accent transition-colors group-hover:bg-accent group-hover:text-black">
                       <Icon className="h-5 w-5" />
                     </div>
                     <div>

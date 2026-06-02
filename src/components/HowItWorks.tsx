@@ -39,7 +39,7 @@ export function HowItWorks() {
                     {/* Connector dot */}
                     <div className="relative mb-6">
                       <motion.div
-                        className="flex h-16 w-16 items-center justify-center rounded-2xl bg-accent text-white shadow-lg shadow-accent/30"
+                        className="flex h-16 w-16 items-center justify-center rounded-2xl bg-accent text-black shadow-lg shadow-accent/30"
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >

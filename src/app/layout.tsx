@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   category: "technology",
   icons: {
     icon: "/icon.svg",
-    apple: "/icon.svg",
+    apple: "/logo.png",
   },
 };
 

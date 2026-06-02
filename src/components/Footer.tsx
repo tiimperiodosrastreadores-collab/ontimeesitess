@@ -1,24 +1,16 @@
 import { navLinks, PLATFORM_URL } from "@/lib/constants";
-import { MapPin } from "lucide-react";
-import Link from "next/link";
+import { Logo } from "./Logo";
 import { Button } from "./ui/Button";
 
 export function Footer() {
   const quickLinks = navLinks.filter((link) => !link.external);
 
   return (
-    <footer className="border-t border-slate-200 bg-navy">
+    <footer className="border-t border-white/5 bg-navy">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">
           <div>
-            <Link href="#inicio" className="flex items-center gap-2.5">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-white">
-                <MapPin className="h-5 w-5" />
-              </div>
-              <span className="text-lg font-bold text-white">
-                OnTime <span className="text-accent-light">Tracker</span>
-              </span>
-            </Link>
+            <Logo href="#inicio" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
               Plataforma completa de rastreamento veicular para empresas e
               gestores de frota.
@@ -26,7 +18,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-300">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-accent-light">
               Links rápidos
             </h3>
             <ul className="mt-4 space-y-3">
@@ -34,7 +26,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-slate-400 transition-colors hover:text-white"
+                    className="text-sm text-slate-400 transition-colors hover:text-accent-light"
                   >
                     {link.label}
                   </a>
@@ -45,7 +37,7 @@ export function Footer() {
                   href={PLATFORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-slate-400 transition-colors hover:text-white"
+                  className="text-sm text-slate-400 transition-colors hover:text-accent-light"
                 >
                   Plataforma
                 </a>
@@ -54,7 +46,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-300">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-accent-light">
               Acesso
             </h3>
             <p className="mt-4 text-sm text-slate-400">

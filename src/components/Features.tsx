@@ -57,7 +57,7 @@ export function Features() {
             return (
               <motion.div key={feature.title} variants={staggerItem}>
                 <GlassCard className="group h-full hover:-translate-y-1 hover:border-accent/20 hover:shadow-accent/10">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-black">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-semibold text-navy">

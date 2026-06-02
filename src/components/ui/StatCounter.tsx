@@ -39,7 +39,7 @@ export function StatCounter({ value, suffix, prefix, label }: StatCounterProps) 
       <div className="text-4xl font-bold text-white md:text-5xl">
         <AnimatedNumber value={value} suffix={suffix} prefix={prefix} />
       </div>
-      <p className="mt-2 text-sm text-blue-200/80 md:text-base">{label}</p>
+      <p className="mt-2 text-sm text-accent-light/80 md:text-base">{label}</p>
     </div>
   );
 }

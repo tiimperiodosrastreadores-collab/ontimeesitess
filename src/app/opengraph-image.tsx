@@ -15,7 +15,7 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #0F172A 0%, #1e293b 50%, #0F172A 100%)",
+          background: "linear-gradient(135deg, #000000 0%, #111111 50%, #000000 100%)",
           padding: "80px",
           position: "relative",
         }}
@@ -28,7 +28,7 @@ export default function OpenGraphImage() {
             width: "400px",
             height: "400px",
             borderRadius: "50%",
-            background: "rgba(37, 99, 235, 0.2)",
+            background: "rgba(34, 197, 94, 0.25)",
           }}
         />
         <div
@@ -44,13 +44,13 @@ export default function OpenGraphImage() {
               width: "56px",
               height: "56px",
               borderRadius: "12px",
-              background: "#2563EB",
+              background: "#22C55E",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#000000">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
             </svg>
           </div>
@@ -79,7 +79,7 @@ export default function OpenGraphImage() {
         <p
           style={{
             fontSize: "28px",
-            color: "#94a3b8",
+            color: "#4ade80",
             marginTop: "24px",
             maxWidth: "700px",
           }}
