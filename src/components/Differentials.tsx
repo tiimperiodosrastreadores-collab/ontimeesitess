@@ -54,9 +54,12 @@ export function Differentials() {
               <motion.div key={item.title} variants={staggerItem}>
                 <GlassCard className="group h-full border border-slate-100 hover:border-accent/20">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy text-accent transition-colors group-hover:bg-accent group-hover:text-black">
+                    <motion.div
+                      className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-navy text-accent transition-colors group-hover:bg-accent group-hover:text-black"
+                      whileHover={{ rotate: 5, scale: 1.08 }}
+                    >
                       <Icon className="h-5 w-5" />
-                    </div>
+                    </motion.div>
                     <div>
                       <h3 className="font-semibold text-navy">{item.title}</h3>
                       <p className="mt-1.5 text-sm leading-relaxed text-muted">

@@ -13,8 +13,17 @@ export function Hero() {
       className="relative min-h-screen overflow-hidden bg-navy pt-28 pb-16 md:pt-36 md:pb-24"
     >
       <div className="hero-grid absolute inset-0 opacity-50" />
-      <div className="absolute top-0 right-0 h-[600px] w-[600px] rounded-full bg-accent/10 blur-[120px]" />
-      <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-accent/5 blur-[100px]" />
+
+      <motion.div
+        className="absolute top-0 right-0 h-[600px] w-[600px] bg-accent/10 blur-[120px]"
+        animate={{ x: [0, 40, 0], y: [0, -30, 0], opacity: [0.08, 0.15, 0.08] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-0 left-0 h-[400px] w-[400px] bg-accent/5 blur-[100px]"
+        animate={{ x: [0, -25, 0], y: [0, 20, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -26,7 +35,13 @@ export function Hero() {
               className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
             >
               Controle sua frota em tempo real com a{" "}
-              <span className="gradient-text">{BRAND_NAME}</span>
+              <motion.span
+                className="gradient-text inline-block"
+                animate={{ opacity: [0.85, 1, 0.85] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
+                {BRAND_NAME}
+              </motion.span>
             </motion.h1>
 
             <motion.p
@@ -57,13 +72,7 @@ export function Hero() {
             </motion.div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            <HeroPlatformImage />
-          </motion.div>
+          <HeroPlatformImage />
         </div>
       </div>
     </section>

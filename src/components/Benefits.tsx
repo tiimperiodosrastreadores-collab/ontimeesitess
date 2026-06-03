@@ -33,7 +33,11 @@ export function Benefits() {
       className="relative overflow-hidden py-20 md:py-28 bg-navy"
     >
       <div className="absolute inset-0 hero-grid opacity-30" />
-      <div className="absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-[100px]" />
+      <motion.div
+        className="absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 bg-accent/10 blur-[100px]"
+        animate={{ scale: [1, 1.1, 1], opacity: [0.06, 0.12, 0.06] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -55,16 +59,22 @@ export function Benefits() {
               <motion.div
                 key={benefit.title}
                 variants={staggerItem}
+                whileHover={{ y: -6, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
                 className="group"
               >
-                <div className="relative h-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-accent/30 hover:bg-white/10">
+                <div className="relative h-full overflow-hidden rounded-sm border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors duration-300 hover:border-accent/40 hover:bg-white/10">
                   <div className="absolute -right-4 -top-4 text-7xl font-bold text-white/5">
                     {String(index + 1).padStart(2, "0")}
                   </div>
                   <div className="relative">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/20 text-accent">
+                    <motion.div
+                      className="mb-4 flex h-12 w-12 items-center justify-center rounded-sm bg-accent/20 text-accent"
+                      whileHover={{ rotate: [0, -8, 8, 0] }}
+                      transition={{ duration: 0.4 }}
+                    >
                       <Icon className="h-6 w-6" />
-                    </div>
+                    </motion.div>
                     <h3 className="text-lg font-semibold text-white">
                       {benefit.title}
                     </h3>

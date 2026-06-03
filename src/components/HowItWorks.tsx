@@ -9,10 +9,7 @@ const stepIcons = [Wrench, ClipboardList, LogIn, Eye];
 
 export function HowItWorks() {
   return (
-    <AnimatedSection
-      id="como-funciona"
-      className="py-20 md:py-28 bg-surface"
-    >
+    <AnimatedSection id="como-funciona" className="py-20 md:py-28 bg-surface">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-accent">
@@ -27,7 +24,6 @@ export function HowItWorks() {
         </div>
 
         <div className="relative mt-16">
-          {/* Timeline line - desktop */}
           <div className="absolute left-0 right-0 top-16 hidden h-0.5 bg-gradient-to-r from-transparent via-accent/30 to-transparent lg:block" />
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -36,18 +32,27 @@ export function HowItWorks() {
               return (
                 <FadeIn key={step.step} delay={index * 0.15}>
                   <div className="relative flex flex-col items-center text-center">
-                    {/* Connector dot */}
                     <div className="relative mb-6">
                       <motion.div
-                        className="flex h-16 w-16 items-center justify-center rounded-2xl bg-accent text-black shadow-lg shadow-accent/30"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ type: "spring", stiffness: 300 }}
+                        className="flex h-16 w-16 items-center justify-center rounded-sm bg-accent text-black shadow-lg shadow-accent/30"
+                        whileHover={{ scale: 1.08, rotate: 3 }}
+                        animate={{ y: [0, -4, 0] }}
+                        transition={{
+                          y: { duration: 2.5, repeat: Infinity, delay: index * 0.3 },
+                          scale: { type: "spring", stiffness: 300 },
+                        }}
                       >
                         <Icon className="h-7 w-7" />
                       </motion.div>
-                      <span className="absolute -top-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full bg-navy text-xs font-bold text-white ring-4 ring-surface">
+                      <motion.span
+                        className="absolute -top-2 -right-2 flex h-7 w-7 items-center justify-center rounded-sm bg-navy text-xs font-bold text-white ring-2 ring-surface"
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 + index * 0.1, type: "spring" }}
+                      >
                         {step.step}
-                      </span>
+                      </motion.span>
                     </div>
 
                     <h3 className="text-lg font-semibold text-navy">
@@ -57,7 +62,6 @@ export function HowItWorks() {
                       {step.description}
                     </p>
 
-                    {/* Vertical connector - mobile/tablet */}
                     {index < steps.length - 1 && (
                       <div className="mt-6 h-8 w-0.5 bg-accent/20 lg:hidden" />
                     )}

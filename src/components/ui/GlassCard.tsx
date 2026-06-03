@@ -1,4 +1,7 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface GlassCardProps {
   children: React.ReactNode;
@@ -8,14 +11,16 @@ interface GlassCardProps {
 
 export function GlassCard({ children, className, dark = false }: GlassCardProps) {
   return (
-    <div
+    <motion.div
+      whileHover={{ y: -4, borderColor: "rgba(34, 197, 94, 0.35)" }}
+      transition={{ type: "spring", stiffness: 300, damping: 22 }}
       className={cn(
-        "rounded-2xl p-6 transition-all duration-300 hover:shadow-lg",
-        dark ? "glass-card-dark" : "glass-card shadow-sm hover:shadow-accent/5",
+        "rounded-sm p-6 transition-shadow duration-300 hover:shadow-lg",
+        dark ? "glass-card-dark" : "glass-card shadow-sm hover:shadow-accent/10",
         className
       )}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }

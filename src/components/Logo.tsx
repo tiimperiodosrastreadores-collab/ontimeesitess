@@ -1,5 +1,8 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { BRAND_NAME } from "@/lib/constants";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,13 +27,10 @@ export function Logo({
   };
 
   const image = (
-    <span
-      className={cn(
-        "inline-flex items-center justify-center rounded-xl transition-all",
-        onDark &&
-          "bg-white px-5 py-3 shadow-xl shadow-black/50 ring-2 ring-white/25",
-        !onDark && "bg-white px-4 py-2.5 shadow-md ring-1 ring-slate-200/80"
-      )}
+    <motion.div
+      whileHover={{ scale: 1.04 }}
+      transition={{ type: "spring", stiffness: 400, damping: 18 }}
+      className="inline-flex"
     >
       <Image
         src="/logo.png"
@@ -38,9 +38,15 @@ export function Logo({
         width={320}
         height={100}
         priority={priority}
-        className={cn(imageSizes[size], "object-contain", className)}
+        className={cn(
+          imageSizes[size],
+          "object-contain",
+          onDark &&
+            "drop-shadow-[0_0_18px_rgba(34,197,94,0.55)] drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]",
+          className
+        )}
       />
-    </span>
+    </motion.div>
   );
 
   if (href) {

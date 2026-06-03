@@ -73,7 +73,7 @@ export function Header() {
         <button
           type="button"
           className={cn(
-            "md:hidden rounded-lg p-2 hover:bg-surface",
+            "md:hidden rounded-sm p-2 hover:bg-surface",
             scrolled ? "text-navy" : "text-white"
           )}
           onClick={() => setIsOpen(!isOpen)}
@@ -96,7 +96,7 @@ export function Header() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg px-4 py-3 text-sm font-medium text-muted hover:bg-surface hover:text-accent-dark"
+                className="rounded-sm px-4 py-3 text-sm font-medium text-muted hover:bg-surface hover:text-accent-dark"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -105,7 +105,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-4 py-3 text-sm font-medium text-muted hover:bg-surface hover:text-accent-dark"
+                className="rounded-sm px-4 py-3 text-sm font-medium text-muted hover:bg-surface hover:text-accent-dark"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
