@@ -1,5 +1,6 @@
 "use client";
 
+import { BRAND_NAME } from "@/lib/constants";
 import { AnimatedSection, FadeIn } from "./ui/AnimatedSection";
 import { CheckCircle2 } from "lucide-react";
 
@@ -16,15 +17,15 @@ export function About() {
               Sobre a Plataforma
             </span>
             <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">
-              O que é a OnTime Tracker?
+              O que é a {BRAND_NAME}?
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-muted">
-              A OnTime Tracker é uma plataforma completa de monitoramento e
+            <p className="mt-6 text-lg leading-relaxed text-muted text-justify">
+              A {BRAND_NAME} é uma plataforma completa de monitoramento e
               rastreamento veicular desenvolvida para empresas, associações de
               proteção veicular, transportadoras e gestores de frota que precisam
               de informações precisas e atualizadas sobre seus veículos.
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-muted">
+            <p className="mt-4 text-lg leading-relaxed text-muted text-justify">
               Com uma interface intuitiva e recursos avançados, a plataforma
               oferece total controle operacional e segurança para seus clientes.
             </p>
@@ -43,7 +44,7 @@ export function About() {
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                    <span className="text-navy font-medium">{item}</span>
+                    <span className="text-navy font-medium text-justify">{item}</span>
                   </div>
                 ))}
               </div>

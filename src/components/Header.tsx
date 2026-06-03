@@ -1,6 +1,6 @@
 "use client";
 
-import { navLinks, PLATFORM_URL } from "@/lib/constants";
+import { navLinks, PLATFORM_URL, WHATSAPP_DEMO_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -35,7 +35,7 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Logo priority />
+        <Logo priority size="large" onDark={!scrolled} />
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) =>
@@ -112,7 +112,10 @@ export function Header() {
               </a>
             )
           )}
-          <div className="mt-2 px-4">
+          <div className="mt-2 space-y-2 px-4">
+            <Button href={WHATSAPP_DEMO_URL} variant="secondary" className="w-full" external>
+              Solicitar Demonstração
+            </Button>
             <Button href={PLATFORM_URL} className="w-full" external>
               Acessar Plataforma
             </Button>

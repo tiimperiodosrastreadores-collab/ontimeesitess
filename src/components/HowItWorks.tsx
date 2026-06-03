@@ -21,7 +21,7 @@ export function HowItWorks() {
           <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">
             Simples de implementar, poderoso na operação
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="mt-4 text-lg text-muted text-justify">
             Em quatro passos, sua frota estará totalmente monitorada.
           </p>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { PLATFORM_URL } from "@/lib/constants";
+import { BRAND_NAME, PLATFORM_URL } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { AnimatedSection } from "./ui/AnimatedSection";
@@ -29,10 +29,9 @@ export function CTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="mx-auto mt-4 max-w-xl text-lg text-slate-300"
+              className="mx-auto mt-4 max-w-xl text-lg text-slate-300 text-justify"
             >
-              Tenha total controle dos seus veículos através da plataforma OnTime
-              Tracker.
+              Tenha total controle dos seus veículos através da {BRAND_NAME}.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -10,8 +10,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">
           <div>
-            <Logo href="#inicio" />
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
+            <Logo href="#inicio" size="large" />
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400 text-justify">
               Plataforma completa de rastreamento veicular para empresas e
               gestores de frota.
             </p>
@@ -49,7 +49,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-accent-light">
               Acesso
             </h3>
-            <p className="mt-4 text-sm text-slate-400">
+            <p className="mt-4 text-sm text-slate-400 text-justify">
               Entre na plataforma e comece a monitorar sua frota agora.
             </p>
             <div className="mt-4">
@@ -62,7 +62,7 @@ export function Footer() {
 
         <div className="mt-10 border-t border-white/10 pt-8 text-center">
           <p className="text-sm text-slate-500">
-            OnTime Tracker © 2026. Todos os direitos reservados.
+            Plataforma OnTime © 2026. Todos os direitos reservados.
           </p>
         </div>
       </div>

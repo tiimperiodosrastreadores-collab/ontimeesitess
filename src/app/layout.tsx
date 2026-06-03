@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { BRAND_NAME } from "@/lib/constants";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,15 +10,14 @@ const inter = Inter({
 });
 
 const siteUrl = "https://ontimetracker.com.br";
-const siteName = "OnTime Tracker";
 const siteDescription =
   "Plataforma completa de rastreamento veicular GPS. Monitore veículos, motos, caminhões e ativos em tempo real com relatórios inteligentes e geocercas.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "OnTime Tracker | Rastreamento Veicular em Tempo Real",
-    template: "%s | OnTime Tracker",
+    default: `${BRAND_NAME} | Rastreamento Veicular em Tempo Real`,
+    template: `%s | ${BRAND_NAME}`,
   },
   description: siteDescription,
   keywords: [
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     "GPS",
     "monitoramento de frota",
     "rastreador",
-    "OnTime Tracker",
+    "Plataforma OnTime",
     "gestão de frota",
     "geocerca",
     "rastreamento em tempo real",
   ],
-  authors: [{ name: "OnTime Tracker" }],
-  creator: "OnTime Tracker",
-  publisher: "OnTime Tracker",
+  authors: [{ name: BRAND_NAME }],
+  creator: BRAND_NAME,
+  publisher: BRAND_NAME,
   robots: {
     index: true,
     follow: true,
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    siteName,
-    title: "OnTime Tracker | Rastreamento Veicular em Tempo Real",
+    siteName: BRAND_NAME,
+    title: `${BRAND_NAME} | Rastreamento Veicular em Tempo Real`,
     description: siteDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: "OnTime Tracker | Rastreamento Veicular em Tempo Real",
+    title: `${BRAND_NAME} | Rastreamento Veicular em Tempo Real`,
     description: siteDescription,
   },
   alternates: {

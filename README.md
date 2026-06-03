@@ -1,6 +1,6 @@
-# OnTime Tracker — Site Institucional
+# Plataforma OnTime — Site Institucional
 
-Site institucional moderno e responsivo para a plataforma de rastreamento veicular **OnTime Tracker**.
+Site institucional moderno e responsivo para a **Plataforma OnTime** de rastreamento veicular.
 
 ## Tecnologias
 
@@ -13,55 +13,13 @@ Site institucional moderno e responsivo para a plataforma de rastreamento veicul
 ## Como executar
 
 ```bash
-# Instalar dependências
 npm install
-
-# Modo desenvolvimento
 npm run dev
-
-# Build de produção
-npm run build
-
-# Servidor de produção
-npm start
 ```
 
-Acesse [http://localhost:3000](http://localhost:3000) após iniciar o servidor de desenvolvimento.
-
-## Estrutura
-
-```
-src/
-├── app/
-│   ├── layout.tsx    # Layout raiz + SEO
-│   ├── page.tsx      # Página principal
-│   └── globals.css   # Estilos globais
-├── components/
-│   ├── Header.tsx
-│   ├── Hero.tsx
-│   ├── About.tsx
-│   ├── Features.tsx
-│   ├── Stats.tsx
-│   ├── Benefits.tsx
-│   ├── HowItWorks.tsx
-│   ├── Differentials.tsx
-│   ├── CTA.tsx
-│   ├── Footer.tsx
-│   └── ui/           # Componentes reutilizáveis
-└── lib/
-    ├── constants.ts  # Conteúdo e dados
-    └── utils.ts
-```
-
-## Identidade Visual
-
-| Cor           | Hex       |
-|---------------|-----------|
-| Azul escuro   | `#0F172A` |
-| Azul destaque | `#2563EB` |
-| Branco        | `#FFFFFF` |
-| Cinza claro   | `#F8FAFC` |
+Acesse [http://localhost:3000](http://localhost:3000).
 
 ## Links
 
 - Plataforma: [https://ontimetracker.com.br](https://ontimetracker.com.br)
+- Repositório: [github.com/joaoschnitzspahn-dev/ontimesite](https://github.com/joaoschnitzspahn-dev/ontimesite)

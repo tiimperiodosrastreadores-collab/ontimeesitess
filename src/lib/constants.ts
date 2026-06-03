@@ -1,4 +1,9 @@
+export const BRAND_NAME = "Plataforma OnTime";
+
 export const PLATFORM_URL = "https://ontimetracker.com.br";
+
+export const WHATSAPP_DEMO_URL =
+  "https://wa.me/554792239267?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20uma%20demonstra%C3%A7%C3%A3o%20da%20Plataforma%20OnTime.";
 
 export const navLinks = [
   { label: "Início", href: "#inicio" },

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "OnTime Tracker - Plataforma de Rastreamento Veicular";
+export const alt = "Plataforma OnTime - Rastreamento Veicular";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -61,7 +61,7 @@ export default function OpenGraphImage() {
               color: "white",
             }}
           >
-            OnTime Tracker
+            Plataforma OnTime
           </span>
         </div>
         <h1

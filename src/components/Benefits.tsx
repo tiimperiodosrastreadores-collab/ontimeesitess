@@ -43,7 +43,7 @@ export function Benefits() {
           <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
             Por que investir em rastreamento veicular?
           </h2>
-          <p className="mt-4 text-lg text-slate-300">
+          <p className="mt-4 text-lg text-slate-300 text-justify">
             Resultados concretos para a operação e segurança do seu negócio.
           </p>
         </div>

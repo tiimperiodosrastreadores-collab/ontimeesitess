@@ -1,6 +1,6 @@
 "use client";
 
-import { differentials } from "@/lib/constants";
+import { BRAND_NAME, differentials } from "@/lib/constants";
 import {
   AnimatedSection,
   StaggerContainer,
@@ -39,9 +39,9 @@ export function Differentials() {
             Diferenciais
           </span>
           <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">
-            Por que escolher a OnTime Tracker?
+            Por que escolher a {BRAND_NAME}?
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="mt-4 text-lg text-muted text-justify">
             Uma plataforma pensada para entregar performance, segurança e
             facilidade de uso.
           </p>

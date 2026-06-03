@@ -45,7 +45,7 @@ export function Features() {
           <h2 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">
             Tudo que você precisa para gerenciar sua frota
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="mt-4 text-lg text-muted text-justify">
             Recursos completos para monitoramento, segurança e gestão eficiente
             dos seus veículos.
           </p>

@@ -23,6 +23,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main p {
+  text-align: justify;
+}
+
 ::selection {
   background-color: #22c55e;
   color: #000000;
@@ -58,4 +62,8 @@ body {
 
 .glow-accent {
   box-shadow: 0 0 60px rgba(34, 197, 94, 0.2);
+}
+
+main p {
+  text-align: justify;
 }
