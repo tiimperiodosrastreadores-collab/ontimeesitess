@@ -49,7 +49,7 @@ export function CTA() {
               className="mt-8"
             >
               <Button href={PLATFORM_URL} size="lg" external>
-                Acessar Plataforma
+                Acesse a plataforma!
                 <ArrowRight className="h-5 w-5" />
               </Button>
             </motion.div>
