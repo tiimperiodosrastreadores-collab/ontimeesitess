@@ -36,7 +36,7 @@ export function Button({
     secondary:
       "bg-white text-navy border border-slate-200 hover:border-accent/30 hover:bg-surface shadow-sm",
     outline:
-      "border-2 border-white/30 text-white hover:bg-white/10 hover:border-accent/50",
+      "border-2 border-slate-300 text-navy bg-white/50 hover:bg-accent/10 hover:border-accent",
     ghost: "text-accent hover:bg-accent/5",
   };
 

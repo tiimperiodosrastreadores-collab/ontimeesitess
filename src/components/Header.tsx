@@ -30,12 +30,12 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200"
+          : "bg-ice/90 backdrop-blur-md border-b border-accent/10"
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Logo priority size="large" onDark={!scrolled} />
+        <Logo priority size="large" />
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) =>
@@ -53,10 +53,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-accent-dark",
-                  scrolled ? "text-muted" : "text-slate-300"
-                )}
+                className="text-sm font-medium text-navy/80 transition-colors hover:text-accent-dark"
               >
                 {link.label}
               </a>
@@ -72,10 +69,7 @@ export function Header() {
 
         <button
           type="button"
-          className={cn(
-            "md:hidden rounded-sm p-2 hover:bg-surface",
-            scrolled ? "text-navy" : "text-white"
-          )}
+          className="md:hidden rounded-sm p-2 text-navy hover:bg-white/60"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
         >
@@ -86,7 +80,7 @@ export function Header() {
       <motion.div
         initial={false}
         animate={isOpen ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
-        className="overflow-hidden md:hidden bg-white border-b border-slate-100"
+        className="overflow-hidden md:hidden bg-white border-b border-slate-200"
       >
         <nav className="flex flex-col gap-1 px-4 py-4">
           {navLinks.map((link) =>
@@ -96,7 +90,7 @@ export function Header() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-sm px-4 py-3 text-sm font-medium text-muted hover:bg-surface hover:text-accent-dark"
+                className="rounded-sm px-4 py-3 text-sm font-medium text-muted hover:bg-ice hover:text-accent-dark"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -105,7 +99,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-sm px-4 py-3 text-sm font-medium text-muted hover:bg-surface hover:text-accent-dark"
+                className="rounded-sm px-4 py-3 text-sm font-medium text-muted hover:bg-ice hover:text-accent-dark"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

@@ -10,17 +10,17 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen overflow-hidden bg-navy pt-28 pb-16 md:pt-36 md:pb-24"
+      className="relative min-h-screen overflow-hidden bg-ice pt-28 pb-16 md:pt-36 md:pb-24"
     >
-      <div className="hero-grid absolute inset-0 opacity-50" />
+      <div className="hero-grid absolute inset-0 opacity-80" />
 
       <motion.div
-        className="absolute top-0 right-0 h-[600px] w-[600px] bg-accent/10 blur-[120px]"
-        animate={{ x: [0, 40, 0], y: [0, -30, 0], opacity: [0.08, 0.15, 0.08] }}
+        className="absolute top-0 right-0 h-[600px] w-[600px] bg-accent/15 blur-[120px]"
+        animate={{ x: [0, 40, 0], y: [0, -30, 0], opacity: [0.12, 0.22, 0.12] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-0 left-0 h-[400px] w-[400px] bg-accent/5 blur-[100px]"
+        className="absolute bottom-0 left-0 h-[400px] w-[400px] bg-accent/10 blur-[100px]"
         animate={{ x: [0, -25, 0], y: [0, 20, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -32,7 +32,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
+              className="text-4xl font-bold leading-tight tracking-tight text-navy sm:text-5xl lg:text-6xl"
             >
               Controle sua frota em tempo real com a{" "}
               <motion.span
@@ -48,7 +48,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300 text-justify"
+              className="mt-6 max-w-xl text-lg leading-relaxed text-muted text-justify"
             >
               Monitore veículos, motos, caminhões e ativos com tecnologia avançada
               de rastreamento GPS, relatórios inteligentes e acompanhamento em
