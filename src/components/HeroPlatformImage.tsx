@@ -2,7 +2,21 @@
 
 import { PLATFORM_PREVIEW_URL, PLATFORM_URL } from "@/lib/constants";
 import { motion } from "framer-motion";
-import { ExternalLink, Radio } from "lucide-react";
+import { ExternalLink, Maximize2, MousePointerClick, Radio } from "lucide-react";
+import Image from "next/image";
+
+function openPlatformPreview() {
+  const width = Math.min(1280, window.screen.width - 80);
+  const height = Math.min(800, window.screen.height - 80);
+  const left = Math.round((window.screen.width - width) / 2);
+  const top = Math.round((window.screen.height - height) / 2);
+
+  window.open(
+    PLATFORM_PREVIEW_URL,
+    "ontime-plataforma",
+    `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
+  );
+}
 
 export function HeroPlatformImage() {
   return (
@@ -26,29 +40,61 @@ export function HeroPlatformImage() {
             <Radio className="h-4 w-4 text-accent" />
             Plataforma ao vivo
           </div>
-          <a
-            href={PLATFORM_PREVIEW_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={openPlatformPreview}
             className="flex items-center gap-1 text-xs font-semibold text-accent-dark transition-colors hover:text-accent"
           >
             Tela cheia
             <ExternalLink className="h-3.5 w-3.5" />
-          </a>
+          </button>
         </div>
 
-        <iframe
-          src={PLATFORM_PREVIEW_URL}
-          title="Plataforma OnTime — visualização interativa do mapa"
-          className="block w-full h-[380px] sm:h-[440px] lg:h-[520px] border-0 bg-slate-100"
-          loading="lazy"
-          allow="geolocation; fullscreen"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+        <button
+          type="button"
+          onClick={openPlatformPreview}
+          className="group relative block w-full cursor-pointer text-left"
+          aria-label="Abrir visualização interativa da plataforma"
+        >
+          <Image
+            src="/plataforma-mapa.png"
+            alt="Mapa da Plataforma OnTime com rastreamento em tempo real"
+            width={1200}
+            height={800}
+            className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            priority
+          />
+
+          <div className="absolute inset-0 bg-navy/0 transition-colors duration-300 group-hover:bg-navy/25" />
+
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6">
+            <motion.div
+              className="flex flex-col items-center gap-3 rounded-sm border-2 border-white/30 bg-navy/75 px-6 py-5 text-center shadow-xl backdrop-blur-sm transition-all duration-300 group-hover:border-accent/50 group-hover:bg-navy/85"
+              whileHover={{ scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-sm bg-accent text-black shadow-lg shadow-accent/40">
+                <Maximize2 className="h-7 w-7" />
+              </div>
+              <div>
+                <p className="text-base font-bold text-white sm:text-lg">
+                  Explorar mapa interativo
+                </p>
+                <p className="mt-1 text-xs text-slate-300 sm:text-sm">
+                  Clique para abrir a plataforma ao vivo
+                </p>
+              </div>
+              <span className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-4 py-2 text-sm font-semibold text-black">
+                <MousePointerClick className="h-4 w-4" />
+                Abrir visualização
+              </span>
+            </motion.div>
+          </div>
+        </button>
       </motion.div>
 
       <p className="mt-3 text-center text-xs text-muted">
-        Navegue pelo mapa em tempo real.{" "}
+        A plataforma abre em janela interativa para navegação no mapa.{" "}
         <a
           href={PLATFORM_URL}
           target="_blank"
