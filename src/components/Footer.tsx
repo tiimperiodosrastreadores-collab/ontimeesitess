@@ -1,10 +1,8 @@
-import { navLinks, PLATFORM_URL } from "@/lib/constants";
+import { navLinks } from "@/lib/constants";
+import { AccessPlatformButton } from "./AccessPlatformButton";
 import { Logo } from "./Logo";
-import { Button } from "./ui/Button";
 
 export function Footer() {
-  const quickLinks = navLinks.filter((link) => !link.external);
-
   return (
     <footer>
       <div className="border-t border-accent/15 bg-ice">
@@ -23,7 +21,7 @@ export function Footer() {
                 Links rápidos
               </h3>
               <ul className="mt-4 space-y-3">
-                {quickLinks.map((link) => (
+                {navLinks.map((link) => (
                   <li key={link.href}>
                     <a
                       href={link.href}
@@ -33,16 +31,6 @@ export function Footer() {
                     </a>
                   </li>
                 ))}
-                <li>
-                  <a
-                    href={PLATFORM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-muted transition-colors hover:text-accent-dark"
-                  >
-                    Plataforma
-                  </a>
-                </li>
               </ul>
             </div>
 
@@ -54,9 +42,7 @@ export function Footer() {
                 Entre na plataforma e comece a monitorar sua frota agora.
               </p>
               <div className="mt-4">
-                <Button href={PLATFORM_URL} size="sm" external>
-                  Acessar Plataforma
-                </Button>
+              <AccessPlatformButton size="sm">Acessar Plataforma</AccessPlatformButton>
               </div>
             </div>
           </div>

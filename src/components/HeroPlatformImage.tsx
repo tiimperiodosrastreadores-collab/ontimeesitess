@@ -1,22 +1,10 @@
 "use client";
 
-import { PLATFORM_PREVIEW_URL, PLATFORM_URL } from "@/lib/constants";
+import { PLATFORM_URL } from "@/lib/constants";
+import { openPlatformWithLogin } from "@/lib/platformAccess";
 import { motion } from "framer-motion";
-import { ExternalLink, Maximize2, MousePointerClick, Radio } from "lucide-react";
+import { ExternalLink, LogIn, MousePointerClick, Radio } from "lucide-react";
 import Image from "next/image";
-
-function openPlatformPreview() {
-  const width = Math.min(1280, window.screen.width - 80);
-  const height = Math.min(800, window.screen.height - 80);
-  const left = Math.round((window.screen.width - width) / 2);
-  const top = Math.round((window.screen.height - height) / 2);
-
-  window.open(
-    PLATFORM_PREVIEW_URL,
-    "ontime-plataforma",
-    `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
-  );
-}
 
 export function HeroPlatformImage() {
   return (
@@ -38,11 +26,11 @@ export function HeroPlatformImage() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
             <Radio className="h-4 w-4 text-accent" />
-            Plataforma ao vivo
+            Plataforma OnTime
           </div>
           <button
             type="button"
-            onClick={openPlatformPreview}
+            onClick={() => openPlatformWithLogin({ target: "popup" })}
             className="flex items-center gap-1 text-xs font-semibold text-accent-dark transition-colors hover:text-accent"
           >
             Tela cheia
@@ -52,9 +40,9 @@ export function HeroPlatformImage() {
 
         <button
           type="button"
-          onClick={openPlatformPreview}
+          onClick={() => openPlatformWithLogin({ target: "popup" })}
           className="group relative block w-full cursor-pointer text-left"
-          aria-label="Abrir visualização interativa da plataforma"
+          aria-label="Acessar plataforma com login automático de demonstração"
         >
           <Image
             src="/plataforma-mapa.png"
@@ -74,19 +62,19 @@ export function HeroPlatformImage() {
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
             >
               <div className="flex h-14 w-14 items-center justify-center rounded-sm bg-accent text-black shadow-lg shadow-accent/40">
-                <Maximize2 className="h-7 w-7" />
+                <LogIn className="h-7 w-7" />
               </div>
               <div>
                 <p className="text-base font-bold text-white sm:text-lg">
-                  Explorar mapa interativo
+                  Acessar plataforma
                 </p>
                 <p className="mt-1 text-xs text-slate-300 sm:text-sm">
-                  Clique para abrir a plataforma ao vivo
+                  Login automático na demonstração
                 </p>
               </div>
               <span className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-4 py-2 text-sm font-semibold text-black">
                 <MousePointerClick className="h-4 w-4" />
-                Abrir visualização
+                Entrar agora
               </span>
             </motion.div>
           </div>
@@ -94,15 +82,16 @@ export function HeroPlatformImage() {
       </motion.div>
 
       <p className="mt-3 text-center text-xs text-muted">
-        A plataforma abre em janela interativa para navegação no mapa.{" "}
+        Abre{" "}
         <a
           href={PLATFORM_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="font-medium text-accent-dark underline-offset-2 hover:underline"
         >
-          Acessar plataforma completa
-        </a>
+          ontimetracker.com.br
+        </a>{" "}
+        já logado com a conta de demonstração.
       </p>
     </div>
   );

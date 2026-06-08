@@ -1,10 +1,10 @@
 "use client";
 
-import { BRAND_NAME, PLATFORM_URL } from "@/lib/constants";
+import { BRAND_NAME } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { AccessPlatformButton } from "./AccessPlatformButton";
 import { AnimatedSection } from "./ui/AnimatedSection";
-import { Button } from "./ui/Button";
 
 export function CTA() {
   return (
@@ -48,10 +48,10 @@ export function CTA() {
               transition={{ delay: 0.2, type: "spring" }}
               className="mt-8"
             >
-              <Button href={PLATFORM_URL} size="lg" external>
+              <AccessPlatformButton size="lg">
                 Acesse a plataforma!
                 <ArrowRight className="h-5 w-5" />
-              </Button>
+              </AccessPlatformButton>
             </motion.div>
           </div>
         </div>

@@ -1,10 +1,11 @@
 "use client";
 
-import { navLinks, PLATFORM_URL, WHATSAPP_DEMO_URL } from "@/lib/constants";
+import { navLinks, WHATSAPP_DEMO_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { AccessPlatformButton } from "./AccessPlatformButton";
 import { Logo } from "./Logo";
 import { Button } from "./ui/Button";
 
@@ -38,33 +39,19 @@ export function Header() {
         <Logo priority size="large" />
 
         <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) =>
-            link.external ? (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-muted transition-colors hover:text-accent-dark"
-              >
-                {link.label}
-              </a>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-navy/80 transition-colors hover:text-accent-dark"
-              >
-                {link.label}
-              </a>
-            )
-          )}
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-navy/80 transition-colors hover:text-accent-dark"
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
 
         <div className="hidden md:block">
-          <Button href={PLATFORM_URL} size="sm" external>
-            Acessar Plataforma
-          </Button>
+          <AccessPlatformButton size="sm">Acessar Plataforma</AccessPlatformButton>
         </div>
 
         <button
@@ -83,36 +70,21 @@ export function Header() {
         className="overflow-hidden md:hidden bg-white border-b border-slate-200"
       >
         <nav className="flex flex-col gap-1 px-4 py-4">
-          {navLinks.map((link) =>
-            link.external ? (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-sm px-4 py-3 text-sm font-medium text-muted hover:bg-ice hover:text-accent-dark"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.label}
-              </a>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                className="rounded-sm px-4 py-3 text-sm font-medium text-muted hover:bg-ice hover:text-accent-dark"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.label}
-              </a>
-            )
-          )}
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="rounded-sm px-4 py-3 text-sm font-medium text-muted hover:bg-ice hover:text-accent-dark"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
           <div className="mt-2 space-y-2 px-4">
             <Button href={WHATSAPP_DEMO_URL} variant="secondary" className="w-full" external>
               Solicitar Demonstração
             </Button>
-            <Button href={PLATFORM_URL} className="w-full" external>
-              Acessar Plataforma
-            </Button>
+            <AccessPlatformButton className="w-full">Acessar Plataforma</AccessPlatformButton>
           </div>
         </nav>
       </motion.div>
