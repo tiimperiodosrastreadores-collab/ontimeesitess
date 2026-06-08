@@ -1,9 +1,8 @@
 "use client";
 
-import { BRAND_NAME, WHATSAPP_DEMO_URL } from "@/lib/constants";
+import { BRAND_NAME, PLATFORM_URL, WHATSAPP_DEMO_URL } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
-import { AccessPlatformButton } from "./AccessPlatformButton";
 import { HeroPlatformImage } from "./HeroPlatformImage";
 import { Button } from "./ui/Button";
 
@@ -62,10 +61,10 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-8 flex flex-col gap-4 sm:flex-row"
             >
-              <AccessPlatformButton size="lg">
+              <Button href={PLATFORM_URL} size="lg" external>
                 Acessar Plataforma
                 <ArrowRight className="h-5 w-5" />
-              </AccessPlatformButton>
+              </Button>
               <Button href={WHATSAPP_DEMO_URL} variant="outline" size="lg" external>
                 <MessageCircle className="h-5 w-5" />
                 Solicitar Demonstração

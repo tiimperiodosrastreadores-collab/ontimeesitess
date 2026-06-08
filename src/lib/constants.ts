@@ -15,7 +15,7 @@ export const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Funcionalidades", href: "#funcionalidades" },
   { label: "Benefícios", href: "#beneficios" },
-  { label: "Plataforma", href: "/acesso" },
+  { label: "Plataforma", href: PLATFORM_URL, external: true },
 ];
 
 export const features = [

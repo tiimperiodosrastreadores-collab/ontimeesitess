@@ -66,15 +66,15 @@ export function HeroPlatformImage() {
               </div>
               <div>
                 <p className="text-base font-bold text-white sm:text-lg">
-                  Acessar plataforma
+                  Ver demonstração
                 </p>
                 <p className="mt-1 text-xs text-slate-300 sm:text-sm">
-                  Login automático na demonstração
+                  Acesso demo com login automático
                 </p>
               </div>
               <span className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-4 py-2 text-sm font-semibold text-black">
                 <MousePointerClick className="h-4 w-4" />
-                Entrar agora
+                Abrir demo
               </span>
             </motion.div>
           </div>
@@ -82,16 +82,16 @@ export function HeroPlatformImage() {
       </motion.div>
 
       <p className="mt-3 text-center text-xs text-muted">
-        Abre{" "}
+        Somente este botão abre a conta de demonstração. Para acesso normal, use{" "}
         <a
           href={PLATFORM_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="font-medium text-accent-dark underline-offset-2 hover:underline"
         >
-          ontimetracker.com.br
-        </a>{" "}
-        já logado com a conta de demonstração.
+          Acessar Plataforma
+        </a>
+        .
       </p>
     </div>
   );

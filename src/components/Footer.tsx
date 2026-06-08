@@ -1,6 +1,6 @@
-import { navLinks } from "@/lib/constants";
-import { AccessPlatformButton } from "./AccessPlatformButton";
+import { navLinks, PLATFORM_URL } from "@/lib/constants";
 import { Logo } from "./Logo";
+import { Button } from "./ui/Button";
 
 export function Footer() {
   return (
@@ -21,16 +21,28 @@ export function Footer() {
                 Links rápidos
               </h3>
               <ul className="mt-4 space-y-3">
-                {navLinks.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      className="text-sm text-muted transition-colors hover:text-accent-dark"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
+                {navLinks
+                  .filter((link) => !link.external)
+                  .map((link) => (
+                    <li key={link.href}>
+                      <a
+                        href={link.href}
+                        className="text-sm text-muted transition-colors hover:text-accent-dark"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                <li>
+                  <a
+                    href={PLATFORM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted transition-colors hover:text-accent-dark"
+                  >
+                    Plataforma
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -42,7 +54,9 @@ export function Footer() {
                 Entre na plataforma e comece a monitorar sua frota agora.
               </p>
               <div className="mt-4">
-              <AccessPlatformButton size="sm">Acessar Plataforma</AccessPlatformButton>
+              <Button href={PLATFORM_URL} size="sm" external>
+                Acessar Plataforma
+              </Button>
               </div>
             </div>
           </div>
